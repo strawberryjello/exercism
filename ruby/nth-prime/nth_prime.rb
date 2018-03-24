@@ -22,10 +22,7 @@ class Prime
 
   private
     def self.is_prime?(x)
-      for i in (FIRST..Math.sqrt(x).floor)
-        return false if x.modulo(i) == 0
-      end
-      return true
+      (FIRST..Math.sqrt(x).floor).none? { |i| x.modulo(i) == 0 }
     end
 
 end
