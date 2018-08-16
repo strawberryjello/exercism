@@ -9,10 +9,16 @@ class Grains
     end
 
     2 ** (nth_square-1)
+
+    # alternate solution:
+    # 1 << (nth_square-1)
   end
 
   def self.total
     CHESSBOARD_RANGE.sum { |n| square(n) }
+
+    # alternate solution:
+    # 2 * square(CHESSBOARD_MAX_SQUARES) - 1
   end
 
 end
